@@ -1,0 +1,185 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+/* header section----------------------------------- */
+#header {
+  display: flex;
+  justify-content: flex-end;
+}
+a,
+p {
+  text-decoration: none;
+  font: 13px arial;
+  color: rgba(0, 0, 0, 0.87);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.topright {
+  margin-top: 20px;
+  margin-inline-end: 20px;
+}
+
+.signin {
+  border: 1px solid #4285f4;
+  color: aliceblue;
+  padding: 0x 12px;
+  line-height: 28px;
+  background-color: #4285f4;
+  font-weight: bold;
+  outline: none;
+}
+
+/* search section -------------------------------------*/
+
+#searchbar-zone {
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 45fr 10fr 10fr 70fr;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 20px;
+  grid-template-areas:
+    '. logo .'
+    '. input-search-mic .'
+    '. buttons .'
+    '. lang-options . ';
+}
+/* @media only screen and (max-width: 600px) {
+  #searchbar-zone {
+    font-size: 0.5em;
+    padding: 0;
+  }
+} */
+#logo {
+  grid-area: logo;
+  justify-self: center;
+  align-self: flex-end;
+}
+#input-search-mic {
+  grid-area: input-search-mic;
+  position: relative;
+  justify-self: center;
+}
+#input {
+  height: 1.5em;
+  width: 40em;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  border-radius: 3em;
+  padding: 1em 2em;
+}
+#input:focus {
+  box-shadow: 1px 1px 5px grey;
+}
+#input:hover {
+  box-shadow: 1px 1px 5px grey;
+}
+.search {
+  position: absolute;
+  left: 0.9em;
+  top: 0.5em;
+
+  color: rgb(154, 160, 166);
+}
+.mic {
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+  cursor: pointer;
+  color: rgb(154, 160, 166);
+}
+#buttons {
+  grid-area: buttons;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+#search-button {
+  border: none;
+  font-size: 0.9em;
+  color: #5f6368;
+  padding: 0.5em 2em;
+  border-radius: 0.5em;
+}
+#search-button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.226);
+}
+#ifm-button {
+  border: none;
+  font-size: 0.9em;
+  color: #5f6368;
+  padding: 0.5em 2em;
+  border-radius: 0.5em;
+  margin-left: 1em;
+}
+#ifm-button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.226);
+}
+
+#lang-options {
+  grid-area: lang-options;
+  justify-self: center;
+}
+
+/* footer section--------------------------------- */
+
+#footer {
+  background: rgb(242, 242, 242);
+  position: fixed;
+  z-index: 104;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 0.5fr 0.5fr 0.4fr 0.8fr 7fr 0.4fr 0.4fr 0.4fr;
+  grid-template-areas: 'advertising business about hsw . privacy terms settings';
+  align-content: start;
+}
+#advertising {
+  grid-area: advertising;
+  align-self: center;
+  justify-self: center;
+}
+#business {
+  grid-area: business;
+  align-self: center;
+  justify-self: center;
+}
+#about {
+  grid-area: about;
+  align-self: center;
+  justify-self: center;
+}
+#hsw {
+  grid-area: hsw;
+  align-self: center;
+  justify-self: center;
+}
+#privacy {
+  grid-area: privacy;
+  align-self: center;
+  justify-self: center;
+}
+#terms {
+  grid-area: terms;
+  align-self: center;
+  justify-self: center;
+}
+#settings {
+  grid-area: settings;
+  align-self: center;
+  justify-self: center;
+  margin-right: 25px;
+}
+#footer > a {
+  font: 14px arial, sans-serif;
+  padding: 0px 0px 0px 27px;
+  color: #5f6368;
+}
